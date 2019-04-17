@@ -1,16 +1,12 @@
 package com.example.autofillrough1;
 
-/**
- * Created by Akash Kumar on 18-Feb-18.
- */
-
 public class User {
 
-    private int id;
-    private String name;
-    private String tambon;
-    private String province;
-    private String code;
+    private int id;//ลำดับ
+    private String name;//ตำบล/แขวง
+    private String tambon;//อำเภอ/เขต
+    private String province;// จังหวัด
+    private String code;//รหัสไปรษณีย์
 
     public User(int id, String name, String tambon, String province, String code) {
         this.id = id;

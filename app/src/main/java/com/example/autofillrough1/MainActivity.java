@@ -18,9 +18,11 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    //    ประกาศตัวแปร
     private AutoCompleteTextView userName;
     private EditText userTambon, userProvince, userCode;
 
+    //    String
     private String jsonString = "{\n" +
             "  \"user_detail\": [\n" +
             "    {\n" +
@@ -912,167 +914,6 @@ public class MainActivity extends AppCompatActivity {
             "      \"province\": \"กรุงเทพมหานคร\",\n" +
             "      \"code\": \"10500\"\n" +
             "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
-//            "    {\n" +
-//            "      \"id\": 128,\n" +
-//            "      \"name\": \"สี่พระยา\",\n" +
-//            "      \"tambon\": \"บางรัก\",\n" +
-//            "      \"province\": \"กรุงเทพมหานคร\",\n" +
-//            "      \"code\": \"10500\"\n" +
-//            "    },\n" +
 
             "  ]\n" +
             "}";
@@ -1090,33 +931,33 @@ public class MainActivity extends AppCompatActivity {
 
         UserAdapter userAdapter = new UserAdapter(this, R.layout.user_raw_layout, userList);
 
+//        ที่กรอกข้อมูล ตำบล/แขวง
         userName.setAdapter(userAdapter);
+//        กำหนดเกณฑ์(1)
         userName.setThreshold(1);
-
+//        ตั้งค่ารายการคลิก
         userName.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+//                Class User
                 User user = (User) parent.getItemAtPosition(position);
-
                 userName.setText(user.getName());
                 userTambon.setText(user.getTambon());
                 userProvince.setText(user.getProvince());
                 userCode.setText(user.getCode());
-
             }
         });
-
     }
 
     private void initView() {
+//        get event
         userName = findViewById(R.id.user_name);
         userTambon = findViewById(R.id.user_tambon);
         userProvince = findViewById(R.id.user_province);
         userCode = findViewById(R.id.user_code);
 
         userList = new ArrayList<>();
-
     }
 
 

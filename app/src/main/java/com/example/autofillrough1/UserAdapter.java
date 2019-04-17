@@ -15,7 +15,7 @@ import java.util.List;
 
 public class UserAdapter extends ArrayAdapter<User> {
 
-    private List<User> userList;
+    private List<User> userList;//list array
     private List<User> tempList;
     private List<User> suggestionList;
 
@@ -38,6 +38,7 @@ public class UserAdapter extends ArrayAdapter<User> {
 
         User user = userList.get(position);
 
+//        ตำบล อำเภอ จังหวัด รหัสไปรษณีย์
         textView.setText(user.getName() + "  " + user.getTambon() + "  " + user.getProvince() + "  " + user.getCode());
 
         return convertView;
@@ -49,7 +50,7 @@ public class UserAdapter extends ArrayAdapter<User> {
         return userFilter;
     }
 
-
+//    ตัวกรองผู้ใช้
     Filter userFilter = new Filter() {
 
         @Override
@@ -69,6 +70,7 @@ public class UserAdapter extends ArrayAdapter<User> {
 
                 for (User user : tempList) {
 
+//                    ตรงนี้ที่เชื่อมโยงกัน (ต.อ.จ.ร.)
                     if (user.getName().toLowerCase().contains(constraint)
                             || user.getTambon().toLowerCase().contains(constraint)
                             || user.getProvince().toLowerCase().contains(constraint)
@@ -80,7 +82,6 @@ public class UserAdapter extends ArrayAdapter<User> {
 
                 filterResults.count = suggestionList.size();
                 filterResults.values = suggestionList;
-
             }
 
             return filterResults;
@@ -100,5 +101,4 @@ public class UserAdapter extends ArrayAdapter<User> {
 
         }
     };
-
 }
