@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context="com.example.autofillrough1.MainActivity">
+    tools:context="MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,13 +16,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="แขวง/ตำบล :"
+            android:textColor="@color/colorBlack"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:text="แขวง/ตำบล :" />
+            android:textStyle="bold" />
 
         <AutoCompleteTextView
             android:id="@+id/user_name"
             android:layout_width="match_parent"
+            android:gravity="center"
             android:layout_height="wrap_content"
             android:hint="กรอกข้อมูล" />
     </LinearLayout>
@@ -34,16 +36,16 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:textSize="16sp"
-            android:textStyle="bold"
             android:layout_height="wrap_content"
-            android:text="เขต/อำเภอ : " />
+            android:text="เขต/อำเภอ : "
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/user_tambon"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <LinearLayout
@@ -54,9 +56,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="จังหวัด : "
+            android:textColor="@color/colorBlack"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:text="จังหวัด : " />
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/user_province"
@@ -71,10 +74,11 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:textSize="16sp"
-            android:textStyle="bold"
             android:layout_height="wrap_content"
-            android:text="รหัสไปรษณีย์ : " />
+            android:text="รหัสไปรษณีย์ : "
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/user_code"

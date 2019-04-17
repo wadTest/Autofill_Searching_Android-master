@@ -13,7 +13,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class UserAdapter extends ArrayAdapter<User> {
 
     private List<User> userList;
