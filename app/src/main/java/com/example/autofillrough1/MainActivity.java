@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private AutoCompleteTextView userName;
     private EditText userTambon, userProvince, userCode;
 
-    //    String
+    //    String จ.อ.ต.
     private String jsonString = "{\n" +
             "  \"address\": [\n" +
             "    {\n" +
@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             "  ]\n" +
             "}";
 
+//    มาจาก Class User
     private ArrayList<User> userList;
 
     @Override
@@ -74,7 +75,8 @@ public class MainActivity extends AppCompatActivity {
                 userCode.setText(user.getCode());
             }
         });
-    }
+
+    }// Method
 
     private void initView() {
 //        get event
@@ -115,4 +117,4 @@ public class MainActivity extends AppCompatActivity {
 
         return list;
     }
-}
+}//Main

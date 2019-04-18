@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!--layout show Answer-->
+    <!--layout Adapter-->
     <TextView
         android:id="@+id/simple_text"
         android:layout_width="match_parent"
