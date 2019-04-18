@@ -15,7 +15,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,27 +23,26 @@ public class MainActivity extends AppCompatActivity {
     private EditText userTambon, userProvince, userCode;
 
     //    String จ.อ.ต.
-    private String jsonString = "http://119.59.103.121/app_mobile/get%20spinner.php";
-//            "{\n" +
-//            "  \"address\": [\n" +
-//            "    {\n" +
-//            "      \"id\": 2,\n" +
-//            "      \"name\": \"bangchak\",\n" +
-//            "      \"tambon\": \"phakhanong\",\n" +
-//            "      \"province\": \"bangkok\",\n" +
-//            "      \"code\": \"10120\"\n" +
-//            "    },\n" +
-//
-//            "    {\n" +
-//            "      \"id\": 3,\n" +
-//            "      \"name\": \"ramkhamhang\",\n" +
-//            "      \"tambon\": \"banhkapi\",\n" +
-//            "      \"province\": \"bangkok\",\n" +
-//            "      \"code\": \"11170\"\n" +
-//            "    },\n" +
-//
-//            "  ]\n" +
-//            "}";
+    private String jsonString = "{\n" +
+            "  \"address\": [\n" +
+            "    {\n" +
+            "      \"id\": 2,\n" +
+            "      \"name\": \"bangchak\",\n" +
+            "      \"tambon\": \"phakhanong\",\n" +
+            "      \"province\": \"bangkok\",\n" +
+            "      \"code\": \"10120\"\n" +
+            "    },\n" +
+
+            "    {\n" +
+            "      \"id\": 3,\n" +
+            "      \"name\": \"ramkhamhang\",\n" +
+            "      \"tambon\": \"banhkapi\",\n" +
+            "      \"province\": \"bangkok\",\n" +
+            "      \"code\": \"11170\"\n" +
+            "    },\n" +
+
+            "  ]\n" +
+            "}";
 
 //    มาจาก Class User
     private ArrayList<User> userList;
@@ -67,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         userName.setAdapter(userAdapter);
 //        กำหนดเกณฑ์(1)
         userName.setThreshold(1);
-//      ตัวกำหนดตัวแปรว่า ตัวแปรนี้คู่กับข้อมูลนี้
+//        ตั้งค่ารายการคลิก
         userName.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -99,17 +97,17 @@ public class MainActivity extends AppCompatActivity {
         try {
             JSONObject rootJO = new JSONObject(jsonString);
 
-            JSONArray userJA = rootJO.getJSONArray(jsonString);
+            JSONArray userJA = rootJO.getJSONArray("address");
 
             for (int i = 0; i < userJA.length(); i++) {
 
                 JSONObject jo = userJA.getJSONObject(i);
 
                 int id = jo.getInt("id");
-                String name = jo.getString("tambon_th");
-                String tambon = jo.getString("amphur_th");
-                String province = jo.getString("province_th");
-                String code = jo.getString("sdist_code");
+                String name = jo.getString("name");
+                String tambon = jo.getString("tambon");
+                String province = jo.getString("province");
+                String code = jo.getString("code");
 
                 User user = new User(id, name, tambon, province, code);
 
