@@ -4,11 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!--layout show Answer-->
     <TextView
         android:id="@+id/simple_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+        android:layout_height="50dp"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textSize="16sp" />
 
     <View
         android:layout_width="match_parent"
