@@ -26,25 +26,26 @@ public class MainActivity extends AppCompatActivity {
     private String jsonString = "{\n" +
             "  \"address\": [\n" +
             "    {\n" +
-            "      \"id\": 2,\n" +
-            "      \"name\": \"bangchak\",\n" +
-            "      \"tambon\": \"phakhanong\",\n" +
+            "      \"id\": 1,\n" +
+            "      \"district\": \"bangchak\",\n" +
+            "      \"amphoe\": \"phakhanong\",\n" +
             "      \"province\": \"bangkok\",\n" +
-            "      \"code\": \"10120\"\n" +
+            "      \"zipcode\": \"10120\"\n" +
             "    },\n" +
 
+
             "    {\n" +
-            "      \"id\": 3,\n" +
-            "      \"name\": \"ramkhamhang\",\n" +
-            "      \"tambon\": \"banhkapi\",\n" +
+            "      \"id\": 2,\n" +
+            "      \"district\": \"ramkhamhang\",\n" +
+            "      \"amphoe\": \"banhkapi\",\n" +
             "      \"province\": \"bangkok\",\n" +
-            "      \"code\": \"11170\"\n" +
+            "      \"zipcode\": \"11170\"\n" +
             "    },\n" +
 
             "  ]\n" +
             "}";
 
-//    มาจาก Class User
+    //    มาจาก Class User
     private ArrayList<User> userList;
 
     @Override
@@ -104,10 +105,10 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject jo = userJA.getJSONObject(i);
 
                 int id = jo.getInt("id");
-                String name = jo.getString("name");
-                String tambon = jo.getString("tambon");
+                String name = jo.getString("district");
+                String tambon = jo.getString("amphoe");
                 String province = jo.getString("province");
-                String code = jo.getString("code");
+                String code = jo.getString("zipcode");
 
                 User user = new User(id, name, tambon, province, code);
 
